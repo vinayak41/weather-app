@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.container {
+    max-width: 360px;
+    min-height: 550px;
+    margin-top: 1.5rem;
+    border: 0.1px solid black;
+    background-image: url(./images/bg2.jpg);
+    background-size: cover;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    background-blend-mode: lighten;
+}
+
+.title {
+    margin-top: 2rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgba(255, 255, 255, 0.479);
+    font-weight: 900;
+    font-size: 1.2rem;
+    /* font-family: 'Concert One', cursive; */
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.search-box input {
+    height: 2rem;
+    border-radius: 0.2rem;
+    border-style: none;
+    width: 15rem;
+    padding-left: 1rem;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-box button {
+    height: 2rem;
+    border-radius: 0.2rem;
+    border-style: none;
+    margin-left: -1.5rem;
+    background-color: rgba(167, 54, 54, 0);
+}
+
+.search-box button:focus {
+    outline: none;
+}
+
+.search-box button:hover {
+    cursor: pointer;
+}
+
+.notification {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    color: red;
+    font-size: 1.3rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.349);
+}
+
+.weather-icon {
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+    float: left;
+    margin-top: -1rem;
+    margin-left: 3rem;
+}
+
+.weather-icon img {
+    max-width: 5rem;
+}
+
+.temprature-value {
+    margin-top: 3rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-shadow: 0.2rem 0.2rem 0.5rem rgb(255, 255, 255);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.temprature-description {
+    clear: both;
+    text-align: center;
+}
+
+.location {
+    text-align: center;
+}
+
+.weahter-container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.temprature-description {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    font-weight: 500;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-transform: capitalize;
+}
+
+.location {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
