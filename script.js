@@ -5,11 +5,7 @@ const locationElement = document.querySelector(".location");
 const inputElement = document.querySelector("input");
 const button = document.querySelector("button");
 
-if (location.protocol === 'http:') {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=b1f48ab458b26aec43aa1b81c9885ffe`
-} else {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=b1f48ab458b26aec43aa1b81c9885ffe`
-}
+
 
 const weather = {
 
@@ -18,7 +14,13 @@ const weather = {
 fetchData()
 
 function fetchData(cityName = "mumbai") {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=b1f48ab458b26aec43aa1b81c9885ffe`).then((response) => response.json()).then((data) => {
+    let url;
+    if (location.protocol === 'http:') {
+        url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=b1f48ab458b26aec43aa1b81c9885ffe`
+    } else {
+        url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=b1f48ab458b26aec43aa1b81c9885ffe`
+    }
+    fetch(url).then((response) => response.json()).then((data) => {
         weather.temp = Math.floor(data.main.temp);
         weather.coord = data.coord;
         weather.desc = data.weather[0].description;
